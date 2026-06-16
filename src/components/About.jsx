@@ -5,7 +5,7 @@ import './About.css';
 export default function About() {
   const stats = [
     { icon: <GraduationCap className="stat-icon" />, label: 'B.Tech Course', value: 'ECE Student' },
-    { icon: <Award className="stat-icon" />, label: 'Academic CGPA', value: '8.73 / 10' },
+    { icon: <Award className="stat-icon" />, label: 'Academic CGPA', value: '8.81 / 10' },
     { icon: <BookOpen className="stat-icon" />, label: 'Institution', value: 'Siddhartha Inst.' },
   ];
 
