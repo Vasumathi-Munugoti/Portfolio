@@ -10,7 +10,7 @@ export default function Education() {
       degree: 'Bachelor of Technology (B.Tech)',
       department: 'Electronics and Communication Engineering (ECE)',
       metricLabel: 'CGPA',
-      metricValue: '8.73 / 10',
+      metricValue: '8.81 / 10',
       description: 'Acquiring deep knowledge in electronic devices, communication protocols, microprocessors, digital signal processing, and IoT systems.',
       keySubjects: ['Embedded Systems', 'Digital Electronics', 'IoT Architectures', 'Signals & Systems']
     },
