@@ -1,0 +1,451 @@
+.projects-container {
+  position: relative;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.project-card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.project-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project-icon-box {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--color-primary);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.project-tag-cat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.project-title {
+  font-family: var(--font-headings);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.project-skills-used {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.project-skills-used span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+/* Simulator Generic styles */
+.project-simulator {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.dark .project-simulator {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.project-simulator h4 {
+  font-family: var(--font-headings);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+/* Stego Simulator styles */
+.sim-p1-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.input-group-sim {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.input-group-sim label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.input-group-sim input {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.sim-p1-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.sim-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.sim-btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.sim-btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.sim-btn-secondary {
+  background: var(--color-accent);
+  color: white;
+}
+
+.sim-btn-secondary:hover:not(:disabled) {
+  background: #0f9f8f;
+}
+
+.sim-btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sim-btn-reset {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.sim-btn-reset:hover {
+  background: var(--border-color);
+}
+
+.sim-p1-visualizer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.image-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.image-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.dummy-image {
+  height: 90px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dummy-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(var(--text-muted) 1px, transparent 1px);
+  background-size: 8px 8px;
+  opacity: 0.15;
+}
+
+.dummy-image.encoded::before {
+  background-image: radial-gradient(var(--color-accent) 1px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.3;
+}
+
+.image-status-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.toggle-view-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  padding: 2px 0;
+}
+
+.toggle-view-btn:hover {
+  text-decoration: underline;
+}
+
+.result-display-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.res-title {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.res-console {
+  background: #020617;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px;
+  height: 90px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.extracted-text-output {
+  color: #10b981;
+}
+
+.console-waiting {
+  color: var(--text-muted);
+}
+
+/* IoT Simulator Styles */
+.sim-p2-layout {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.water-tank {
+  width: 60px;
+  height: 150px;
+  border: 3px solid var(--text-secondary);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.water-level-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.water-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+}
+
+.sensor-marker {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-top: 1px dashed rgba(255, 255, 255, 0.4);
+  font-size: 0.6rem;
+  color: var(--text-secondary);
+  padding-left: 4px;
+  pointer-events: none;
+}
+
+.low-marker {
+  bottom: 20%;
+}
+
+.high-marker {
+  bottom: 90%;
+}
+
+.sim-p2-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.iot-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+}
+
+.metric-lbl {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.metric-val {
+  font-family: var(--font-headings);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pump-status-indicator {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.pump-status-indicator.on {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.pump-status-indicator.off {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.sim-p2-control-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.sim-p2-control-buttons label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.level-btns-grid {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-level {
+  flex: 1;
+  padding: 6px 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-level:hover {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.sim-info-note {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+  margin-top: 4px;
+}
+
+/* Responsive grid */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-card {
+    padding: 30px 20px;
+  }
+  
+  .sim-p1-visualizer {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,121 @@
+.certifications-container {
+  position: relative;
+}
+
+.certs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.cert-item-card {
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  text-align: left;
+}
+
+.cert-badge-ribbon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  width: 90px;
+  text-align: center;
+}
+
+.cert-badge-ribbon span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  line-height: 1.2;
+}
+
+/* Gold Theme specific styling */
+.border-gold {
+  border-left: 4px solid #f59e0b;
+}
+
+.icon-gold {
+  color: #f59e0b;
+  filter: drop-shadow(0 2px 8px rgba(245, 158, 11, 0.4));
+  animation: float 3s ease-in-out infinite;
+}
+
+.badge-text-gold {
+  color: #f59e0b;
+}
+
+/* Blue Theme specific styling */
+.border-blue {
+  border-left: 4px solid var(--color-primary);
+}
+
+.icon-blue {
+  color: var(--color-primary);
+  filter: drop-shadow(0 2px 8px rgba(79, 70, 229, 0.4));
+  animation: float 4s ease-in-out infinite;
+}
+
+.badge-text-blue {
+  color: var(--color-primary);
+}
+
+/* Main information structure */
+.cert-main-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cert-title {
+  font-family: var(--font-headings);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.cert-issuer {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.cert-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.cert-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .cert-item-card {
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+  }
+  
+  .cert-badge-ribbon {
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+    width: 100%;
+  }
+}
